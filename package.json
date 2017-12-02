@@ -1,0 +1,19 @@
+{
+    "name": "cachefile",
+    "version": "0.0.1",
+    "description": "simple file caching/syncing",
+    "keywords": [
+      "file",
+      "cache",
+      "syncing"
+    ],
+    "repository": "git://github.com/iwrastudios/node-cachefile.git",
+    "author": "IwraStudios <Iwrastudios@hotmail.com>",
+    "main": "cache.js",
+    "engines": {
+      "node": ">= 0.4.0"
+    },
+    "devDependencies": {},
+    "dependencies": {},
+    "scripts": { }
+  }
