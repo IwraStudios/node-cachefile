@@ -3,6 +3,10 @@ A very small node module for caching &amp; syncing files to ram with virtually z
 
 Recommended with small-file/web servers
 
+`var cache = require("cachefile");` can also be `var cache = require("./cache");` depending on the way you import it
+
+npm not yet available
+
 You can see the last synctime(Unix epoch) like this:
 ```js
 cache.cachedFiles["name"]["timestamp"];
