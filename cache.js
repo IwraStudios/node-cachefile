@@ -6,7 +6,7 @@ module.exports = {
     //Example FS.AddFileToCache('welcome', '/README.md');
     AddFileToCache: function (name, filerpath) {
         return new Promise(function (resolve, reject) {
-            fs.readFile(__dirname + filerpath, 'utf8', function (err, data) {
+            fs.readFile(filerpath, 'utf8', function (err, data) {
                 if (err) {
                     console.log(err);
                     reject(err);
@@ -21,9 +21,9 @@ module.exports = {
     },
 
     SyncCache: function () {
-        return cachedFiles.map(file => {
+        return Object.keys(cachedFiles).map(file => {
             return new Promise(function (resolve, reject) {
-                fs.readFile(__dirname + cachedFiles[file]['path'], 'utf8', function (err, data) {
+                fs.readFile(cachedFiles[file]['path'], 'utf8', function (err, data) {
                     if (err) {
                         console.log(err);
                         return reject(err);
@@ -35,8 +35,6 @@ module.exports = {
             });
         });
     },
-
+    
     cachedFiles: cachedFiles
-
-
 };
